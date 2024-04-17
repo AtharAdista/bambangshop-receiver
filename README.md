@@ -68,16 +68,16 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement list_all_as_string function in Notification repository.`
     -   [x] Write answers of your learning module's "Reflection Subscriber-1" questions in this README.
 -   **STAGE 3: Implement services and controllers**
-    -   [ ] Commit: `Create Notification service struct skeleton.`
-    -   [ ] Commit: `Implement subscribe function in Notification service.`
-    -   [ ] Commit: `Implement subscribe function in Notification controller.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification service.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Commit: `Implement receive_notification function in Notification service.`
-    -   [ ] Commit: `Implement receive function in Notification controller.`
-    -   [ ] Commit: `Implement list_messages function in Notification service.`
-    -   [ ] Commit: `Implement list function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
+    -   [x] Commit: `Create Notification service struct skeleton.`
+    -   [x] Commit: `Implement subscribe function in Notification service.`
+    -   [x] Commit: `Implement subscribe function in Notification controller.`
+    -   [x] Commit: `Implement unsubscribe function in Notification service.`
+    -   [x] Commit: `Implement unsubscribe function in Notification controller.`
+    -   [x] Commit: `Implement receive_notification function in Notification service.`
+    -   [x] Commit: `Implement receive function in Notification controller.`
+    -   [x] Commit: `Implement list_messages function in Notification service.`
+    -   [x] Commit: `Implement list function in Notification controller.`
+    -   [x] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -90,3 +90,8 @@ This is the place for you to write reflections:
 2. Dalam Rust, "static" variable memilik sifat yang berbeda dengan static variable dalam bahasa java. Di Rust "static" variable defaultnya bersifat immutable dan thread-safe. Ini diterapkan untuk mencegah masalah konkurensi yang umumnya terjadi, selain itu Rust tidak mengizinkan mutasi langsung terhadap variabel statis karena alasan keamanan dan kestabilan, seperti untuk mencegah kondisi race condition. Dengan membuat "static" variable immutable secara default, Rust mendorong kita untuk menggunakan struktur data yang bersifat thread-safe untuk mengakses data secara bersama secara aman. Oleh karena itu, Rust tidak mengizinkan pengubahan nilai "static" variable secara langsung karena dapat membahayakan keamanan dan kestabilan program, terutama dalam lingkungan konkurensi.
 
 #### Reflection Subscriber-2
+1. Saya sudah membaca mengenai src/lib.rs, src/lib.rs merupakan titik awal dari sebuah library rust dan berfungsi sebagai tempat untuk menuliskan kode utama yang ingin dipublikasikan. Isi dari file src/lib.rs akan terdiri dari definisi modul dan fungsi-fungsi yang akan dipublikasikan oleh library. Ketika kita membuat proyek rust baru menggunakan cargo, maka file src/lib.rs akan otomatis dibuat dalam src. Hal lain yang sudah saya pelajari mengenai Rust adalah bagaimana cara melakukan testing di Rust, walaupun saya belum terlalu memahaminya. Selain itu, saya juga baru mempelajari mengenai lazy_static, layz_static berfungsi untuk membuat variabel statik yang diinit secara lazy saat pertama kali diakses, sehingga variabel akan diinit saat pertama kali diakses, bukan saat aplikasi dimulai, sehingga akan menciptakan efisiensi memori dan dapat mencegah deadlock.
+
+2. Observer pattern dapat mempermudah penambahan subscriber dikarenakan pada observer pattern, publisher memberitahukan setiap subscriber yang melakukan subscribe jika terjadi perubahan, sedangkan para subscriber tidak mengetahui satu sama lain. Pemisahan ini membuat sistem semakin fleksibel dan mudah diperluas di mana subscriber baru dapat dengan mudah ditambahkan tanpa memodifikasi struktur utama aplikasi, publisher atau subscriber lainnya. Untuk membuat lebih dari satu instance aplikasi utama bisa dilakukan jika observer pattern diimplementasikan dengan baik. Setiap instance dari aplikasi utama dapat memiliki kumpulan pelanggan sendiri, dan menambahkan pelanggan baru ke setiap instance mengikuti proses yang sama. Namun, jika observer pattern tidak dirancang untuk menangangi beberapa instance dari aplikasi utama, maka akan meningkatkan kompleksitas dan memerlukan mekanisme tambahan sinkronisasi tambahan untuk memastikan bahwa subscriber diberitahu dengan benar di semua instance.
+
+3. Sudah tapi baru beberapa saja, seperti sedikit pengujian dan pembuatan dokumentasi. Pengujian sangat membantu saya ketika ingin melakukan pengujian API dan memastikan bahwa API berfungsi dengan baik, pembuatan dokumentasi membantu saya agar API yang saya buat dapat dipahami oleh orang. Semua fitur yang disediakan postman sangat membantu pekerjaan saya agar lebih efisien daripada sebelumnya.
